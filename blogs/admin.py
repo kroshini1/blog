@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.http import HttpRequest 
 
-from blogs.models import  Abouts, Blog, category,SocialLink
+from blogs.models import  Abouts, Blog, category,SocialLink,Comment
 
 class CatAdmin(admin.ModelAdmin):
     list_display=('category_name','updated_at','created_at')
@@ -23,5 +23,6 @@ class Aboutadmin(admin.ModelAdmin):
 admin.site.register(category,CatAdmin)
 admin.site.register(Abouts,Aboutadmin)
 admin.site.register(SocialLink)
+admin.site.register(Comment)
 
 admin.site.register(Blog,Blogadmin)
